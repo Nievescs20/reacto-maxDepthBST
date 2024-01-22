@@ -7,6 +7,8 @@
  * }
  */
 
+// Breadth First Search
+
 function maxDepthBST_BFS(root) {
   if (root === null) return 0;
   let maxDepth = 0;
@@ -30,8 +32,10 @@ function maxDepthBST_BFS(root) {
   return maxDepth;
 }
 
+// Depth First Search
+
 function maxDepthBST_BFS_DFS(root) {
-  if (root == null) return level;
+  if (root === null) return level;
 
   level += 1;
   return Math.max(maxDepth(root.left, level), maxDepth(root.right, level));
