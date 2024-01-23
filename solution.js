@@ -7,6 +7,14 @@
  * }
  */
 
+class TreeNode {
+  constructor(val, left, right) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 // Breadth First Search
 
 function maxDepthBST_BFS(root) {
@@ -43,3 +51,12 @@ function maxDepthBST_DFS(root, level = 0) {
     maxDepthBST_DFS(root.right, level)
   );
 }
+
+const test = new TreeNode(
+  3,
+  new TreeNode(9, null, null),
+  new TreeNode(20, new TreeNode(15, null, null), new TreeNode(7, null, null))
+);
+
+console.log("breadth_first_search", maxDepthBST_BFS(test));
+console.log("depth_first_search", maxDepthBST_DFS(test));
