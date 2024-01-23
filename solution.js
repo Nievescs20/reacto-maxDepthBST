@@ -39,7 +39,7 @@ function maxDepthBST_DFS(root, level = 0) {
 
   level += 1;
   return Math.max(
-    maxDepthBST_BFS_DFS(root.left, level),
-    maxDepthBST_BFS_DFS(root.right, level)
+    maxDepthBST_DFS(root.left, level),
+    maxDepthBST_DFS(root.right, level)
   );
 }
