@@ -34,7 +34,7 @@ function maxDepthBST_BFS(root) {
 
 // Depth First Search
 
-function maxDepthBST_BFS_DFS(root, level = 0) {
+function maxDepthBST_DFS(root, level = 0) {
   if (root === null) return level;
 
   level += 1;
